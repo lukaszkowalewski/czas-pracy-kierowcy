@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator czasu pracy kierowcy</title>
+  <link rel="manifest" href="manifest.json">
+  <script src="app.js" defer></script>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    h1 { text-align: center; }
+    .container { max-width: 400px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input { width: 80px; padding: 5px; margin: 5px; }
+    button { padding: 10px; margin: 5px; cursor: pointer; }
+    ul { list-style: none; padding: 0; }
+    li { background: #eee; margin: 5px 0; padding: 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Czas pracy kierowcy</h1>
+    <div>
+      <label>Godziny: <input type="number" id="hours" min="0" value="0"></label>
+      <label>Minuty: <input type="number" id="minutes" min="0" max="59" value="0"></label>
+      <button onclick="addTime()">Dodaj</button>
+    </div>
+    <h2>Łączny czas: <span id="total">0h 0m</span></h2>
+    <h3>Historia:</h3>
+    <ul id="history"></ul>
+  </div>
+</body>
+</html>
